@@ -596,5 +596,6 @@ document.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;ty=e.
 document.addEventListener('touchend',function(e){if(page!=='study')return;var dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5){if(dx<0)W.studyNav(1);else W.studyNav(-1)}});
 })();
 </script>
+<div style="position:fixed;bottom:6px;left:0;width:100%;text-align:center;font-size:11px;color:#b0b0b0;opacity:0.7;pointer-events:none;z-index:9999;letter-spacing:0.5px;">小红书 @今天学点啥</div>
 </body>
 </html>
