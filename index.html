@@ -436,6 +436,7 @@ function renderStudy(){
   h+='<div class="content-text">'+ct+'</div>';
   if(pt.mnemonics)h+='<div class="mnemonic-box"><div class="mnemonic-label">💡 记忆口诀</div><div class="mnemonic-text">'+esc(pt.mnemonics).replace(/\n/g,'<br>')+'</div></div>';
   if(pt.examTip)h+='<div class="exam-tip-box"><div class="exam-tip-label">⚠️ 考试提醒</div><div class="exam-tip-text">'+esc(pt.examTip)+'</div></div>';
+  if(pt.extension)h+='<div class="exam-tip-box" style="border-color:#b3d4fc;background:#f0f7ff"><div class="exam-tip-label" style="color:#1a73e8">📖 知识拓展</div><div class="exam-tip-text">'+esc(pt.extension)+'</div></div>';
   h+='</div>';
 
   h+='<div class="actions"><div class="action-row"><button class="action-btn reveal-btn" onclick="W.markL(\''+pt.id+'\')" '+(isL?'disabled':'')+'>'+( isL?'✅ 已掌握':'📖 标记已掌握')+'</button></div><div class="action-row"><button class="small-btn '+(isFav?'small-btn-active':'')+'" onclick="W.togFav(\''+pt.id+'\')">'+(isFav?'📌 已收藏':'📌 收藏')+'</button></div></div>';
