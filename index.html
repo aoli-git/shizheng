@@ -286,6 +286,50 @@ button{font-family:inherit;color:inherit;cursor:pointer;border:none;background:n
 .mm-children{margin-left:16px;padding-left:14px;border-left:1.5px solid var(--border)}
 
 /* List pages */
+/* ===== PITFALL PAGE ===== */
+.pit-header{position:sticky;top:0;background:var(--bg-solid);padding:16px 0 12px;padding-top:max(16px,env(safe-area-inset-top,16px));z-index:10}
+.pit-title{font-size:22px;font-weight:700;margin-top:4px}
+.pit-stats{font-size:13px;color:var(--text-secondary);margin-top:4px}
+.pit-group{background:var(--bg-card);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;margin-bottom:12px}
+.pit-group-header{display:flex;align-items:center;justify-content:space-between;width:100%;padding:14px 16px;text-align:left}
+.pit-group-header:active{background:var(--border)}
+.pg-left{display:flex;align-items:center;gap:10px}
+.pg-icon{font-size:20px}
+.pg-name{font-size:15px;font-weight:600;color:var(--text)}
+.pg-right{display:flex;align-items:center;gap:6px}
+.pg-count{font-size:13px;color:var(--text-secondary);font-weight:500;background:var(--accent-light);padding:2px 8px;border-radius:10px}
+.pg-arrow{font-size:10px;color:var(--text-tertiary);transition:transform 0.2s}
+.pit-items{padding:0 12px 12px}
+.pit-card{background:var(--bg-elevated);border-radius:var(--radius-sm);border:1px solid var(--border);margin-bottom:8px;overflow:hidden}
+.pit-card-header{display:flex;align-items:center;gap:4px;padding:12px 14px;width:100%}
+.pit-card-main{display:flex;align-items:center;gap:8px;flex:1;min-width:0;cursor:pointer;text-align:left;flex-wrap:wrap}
+.pit-card-main:active{opacity:0.7}
+.pit-card-icon{font-size:16px;flex-shrink:0}
+.pit-card-title{flex:1;font-size:14px;font-weight:600;line-height:1.4;color:var(--text)}
+.pit-card-acc{font-size:11px;color:var(--danger);font-weight:600;flex-shrink:0;background:var(--danger-light);padding:2px 6px;border-radius:8px}
+.pit-card-read .pit-card-icon{color:var(--success)}
+.pit-card-read .pit-card-title{color:var(--text-secondary);font-weight:500}
+.pit-card-body{padding:0 14px 14px;animation:fadeIn 0.25s ease}
+.pit-correct{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;background:var(--success-light);border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.6;color:var(--text)}
+.pit-wrong{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;background:var(--danger-light);border-radius:8px;margin-bottom:6px;font-size:13px;line-height:1.6;color:var(--text)}
+.pit-explain{font-size:12px;line-height:1.6;color:var(--text-secondary);padding:6px 0 4px}
+.pit-source{font-size:11px;color:var(--text-tertiary);margin-top:4px}
+.pit-cw-icon{flex-shrink:0;font-size:14px;margin-top:1px}
+.pit-filter{display:flex;gap:8px;margin-bottom:12px}
+.pit-filter-btn{flex:1;padding:8px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;text-align:center;background:var(--bg-card);border:1px solid var(--border);color:var(--text-secondary);transition:all 0.2s}
+.pit-filter-btn:active{transform:scale(0.96)}
+.pit-filter-active{background:var(--accent-light);border-color:var(--accent);color:var(--accent)}
+.pit-trap-tag{font-size:11px;padding:1px 6px;border-radius:8px;background:rgba(99,102,241,0.12);color:#6366f1;margin-left:6px;white-space:nowrap;flex-shrink:0}
+.pit-acc-danger{background:#fee2e2;color:#dc2626}.pit-acc-danger::before{content:"\u{1f525} "}.pit-acc-warn{background:#ffedd5;color:#ea580c}.pit-acc-caution{background:#fef9c3;color:#a16207}.pit-acc-safe{background:#dcfce7;color:#16a34a}
+.pit-season-select{border:1px solid var(--border);background:var(--bg-card);font-size:13px;padding:6px 10px;border-radius:var(--radius-sm);color:var(--text);margin-bottom:12px;width:100%;font-family:inherit}
+.pit-freq-tag{font-size:10px;padding:1px 5px;border-radius:8px;background:rgba(239,68,68,0.12);color:#ef4444;margin-left:4px;white-space:nowrap;flex-shrink:0}
+.pit-fav-btn{border:none;background:none;font-size:16px;cursor:pointer;padding:4px;margin-left:auto;flex-shrink:0;opacity:0.4;transition:opacity 0.2s}
+.pit-fav-btn.pit-fav-active{opacity:1}
+.pg-progress{height:3px;background:var(--border);border-radius:2px;margin:0 16px 2px;overflow:hidden}
+.pg-progress-fill{height:100%;background:var(--accent-gradient);border-radius:2px;transition:width 0.3s}
+.pit-more-btn{display:flex;align-items:center;justify-content:center;width:100%;padding:10px;font-size:13px;font-weight:500;color:var(--text-secondary);border:1px dashed var(--border);border-radius:var(--radius-sm);background:none;transition:all 0.2s;margin-top:4px}
+.pit-more-btn:active{transform:scale(0.98)}
+
 .list-page{padding:0}
 .list-item{background:var(--bg-card);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:8px;box-shadow:var(--shadow);border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;text-align:left;width:100%;transition:transform 0.2s}
 .list-item:active{transform:scale(0.98)}
@@ -306,7 +350,7 @@ button{font-family:inherit;color:inherit;cursor:pointer;border:none;background:n
 
 // ========== STORAGE ==========
 var SK='sz-progress-share',TK='sz-theme-share';
-function loadP(){try{var s=localStorage.getItem(SK);if(s)return JSON.parse(s)}catch(e){}return{learned:{},favorites:[],mistakes:{},lastPosition:null}}
+function loadP(){try{var s=localStorage.getItem(SK);if(s){var d=JSON.parse(s);if(!d.pitRead)d.pitRead={};if(!d.pitFav)d.pitFav={};return d}}catch(e){}return{learned:{},favorites:[],mistakes:{},lastPosition:null,pitRead:{},pitFav:{}}}
 function saveP(p){try{localStorage.setItem(SK,JSON.stringify(p))}catch(e){}}
 var progress=loadP();
 function loadT(){return localStorage.getItem(TK)||'light'}
@@ -361,6 +405,7 @@ function renderHome(){
   h+='<button class="tool-card tool-fav" onclick="W.nav(\'favorites\')"><span class="tool-icon">📌</span><span>我的收藏</span>'+(progress.favorites.length?'<span class="tool-badge">'+progress.favorites.length+'</span>':'')+'</button>';
   h+='<button class="tool-card tool-mindmap" onclick="W.nav(\'mindmap\')"><span class="tool-icon">🧠</span><span>脑图速览</span></button>';
   h+='<button class="tool-card tool-learned" onclick="W.nav(\'learned\')"><span class="tool-icon">🏆</span><span>已掌握</span>'+(lc?'<span class="tool-badge-learned">'+lc+'</span>':'')+'</button>';
+  if(typeof pitfalls!=='undefined'&&pitfalls.length){var _freePits=pitfalls.filter(function(p){var s=p.source.match(/第(\d+)季/);return s&&parseInt(s[1])>=25&&parseInt(s[1])<=28});h+='<button class="tool-card" style="background:var(--color-rose-bg);border-color:var(--color-rose-light)" onclick="W.nav(\'pitfalls\')"><span class="tool-icon">⚠️</span><span>政治理论坑点</span><span style="font-size:11px;color:var(--text-tertiary);margin-top:2px">含高频易错点</span></button>'}
   h+='</div></section><footer class="footer"><p>坚持就是胜利 · 备考加油</p></footer></div>';
   return h;
 }
@@ -541,10 +586,77 @@ function renderLearned(){
   h+='<div class="reset-section"><button class="reset-btn" onclick="W.reset()">重置所有进度</button></div></div>';return h;
 }
 
+var pitExpanded={},pitCardExpanded={},pitFilterMode='all',pitShowAll={},pitSeasonFilter='all';
+var PIT_CAT_ICONS={'\u9a6c\u54f2':'\u{1f4d6}','\u7ecf\u6d4e':'\u{1f4b0}','\u653f\u6cbb':'\u{1f3db}\ufe0f','\u91cd\u8981\u6587\u4ef6':'\u{1f4dc}','\u91cd\u8981\u4f1a\u8bae\u8bb2\u8bdd':'\u{1f399}\ufe0f','\u793e\u4f1a\u00b7\u6587\u5316\u00b7\u751f\u6001':'\u{1f331}','\u65b0\u601d\u60f3\u603b\u8bba':'\u2b50'};
+var PIT_PAGE_SIZE=10;
+function pitAccClass(acc){var n=parseInt(acc);if(n<=20)return'pit-acc-danger';if(n<=50)return'pit-acc-warn';if(n<=70)return'pit-acc-caution';return'pit-acc-safe'}
+function pitAccLabel(acc){var n=parseInt(acc);if(n<=20)return'\u6781\u6613\u9519';if(n<=50)return'\u8f83\u6613\u9519';if(n<=70)return'\u9700\u6ce8\u610f';return'\u76f8\u5bf9\u5b89\u5168'}
+function pitFreqCount(p){if(!p.group)return 0;var c=0;pitfalls.forEach(function(x){if(x.group===p.group)c++});return c}
+function pitSeason(p){var m=p.source.match(/\u7b2c(\d+)\u5b63/);return m?m[1]:''}
+function renderPitCard(p){
+  var cardOpen=pitCardExpanded[p.id];var isRead=progress.pitRead[p.id];var isFav=progress.pitFav&&progress.pitFav[p.id];
+  var freq=pitFreqCount(p);var accCls=pitAccClass(p.accuracy);
+  var h='<div class="pit-card'+(isRead?' pit-card-read':'')+'"><div class="pit-card-header"><div class="pit-card-main" onclick="W.pitToggleCard(\''+p.id+'\')"><span class="pit-card-icon">'+(isRead?'\u2713':(cardOpen?'\u25be':'\u25b8'))+'</span><span class="pit-card-title">'+esc(p.title)+'</span>';
+  if(p.trap)h+='<span class="pit-trap-tag">'+esc(p.trap)+'</span>';
+  if(freq>=2)h+='<span class="pit-freq-tag">\u9ad8\u9891'+freq+'x</span>';
+  h+='<span class="pit-card-acc '+accCls+'">'+pitAccLabel(p.accuracy)+' '+p.accuracy+'</span>';
+  h+='</div><span class="pit-fav-btn'+(isFav?' pit-fav-active':'')+'" onclick="W.pitToggleFav(\''+p.id+'\')">'+(isFav?'\u2b50':'\u2606')+'</span>';
+  h+='</div>';
+  if(cardOpen){h+='<div class="pit-card-body"><div class="pit-correct"><span class="pit-cw-icon">\u2705</span><span>'+esc(p.correct)+'</span></div><div class="pit-wrong"><span class="pit-cw-icon">\u274c</span><span>'+esc(p.wrong)+'</span></div><div class="pit-explain">\u{1f4a1} '+esc(p.explain)+'</div><div class="pit-source">\u{1f4ce} '+esc(p.source)+'</div></div>'}
+  h+='</div>';return h;
+}
+function renderPitfalls(){
+  if(typeof pitfalls==='undefined'||!pitfalls.length)return'<div class="empty-msg">\u6682\u65e0\u5751\u70b9\u6570\u636e</div>';
+  var freePits=pitfalls.filter(function(p){var s=pitSeason(p);return s&&parseInt(s)>=25&&parseInt(s)<=28});
+  var seasons={};freePits.forEach(function(p){var s=pitSeason(p);if(s)seasons[s]=true});
+  var seasonKeys=Object.keys(seasons).sort(function(a,b){return parseInt(a)-parseInt(b)});
+  var seasonBase=pitSeasonFilter==='all'?freePits:freePits.filter(function(p){return pitSeason(p)===pitSeasonFilter});
+  var filtered=seasonBase.filter(function(p){
+    if(pitFilterMode==='unread'&&progress.pitRead[p.id]&&!pitCardExpanded[p.id])return false;
+    if(pitFilterMode==='read'&&!progress.pitRead[p.id])return false;
+    if(pitFilterMode==='fav'&&!(progress.pitFav&&progress.pitFav[p.id]))return false;
+    return true;
+  });
+  var totalRead=0;seasonBase.forEach(function(p){if(progress.pitRead[p.id])totalRead++});
+  var totalUnread=seasonBase.length-totalRead;
+  var totalFav=0;seasonBase.forEach(function(p){if(progress.pitFav&&progress.pitFav[p.id])totalFav++});
+  var groups={};
+  filtered.forEach(function(p){var k=p.category;if(!groups[k])groups[k]=[];groups[k].push(p)});
+  var allGroups={};seasonBase.forEach(function(p){var k=p.category;if(!allGroups[k])allGroups[k]=[];allGroups[k].push(p)});
+  var keys=Object.keys(groups).sort(function(a,b){return groups[b].length-groups[a].length});
+  var h='<div class="page"><header class="pit-header"><button class="back-btn" onclick="W.nav(\'home\')">\u2190 \u8fd4\u56de\u9996\u9875</button><h1 class="pit-title">\u26a0\ufe0f \u653f\u6cbb\u7406\u8bba\u5751\u70b9</h1><p class="pit-stats">\u514d\u8d39\u8bd5\u8bfb\uff08\u7b2c25-28\u5b63\uff09\u5171 '+seasonBase.length+' \u4e2a\u5751\u70b9 | \u5df2\u8bfb '+totalRead+' | \u672a\u8bfb '+totalUnread+(totalRead?' <a href="javascript:W.pitReset()" style="color:var(--text-tertiary);font-size:12px;margin-left:8px">\u91cd\u7f6e</a>':'')+'</p></header>';
+  h+='<div class="pit-filter"><button class="pit-filter-btn'+(pitFilterMode==='all'?' pit-filter-active':'')+'" onclick="W.pitFilter(\'all\')">\u5168\u90e8</button><button class="pit-filter-btn'+(pitFilterMode==='unread'?' pit-filter-active':'')+'" onclick="W.pitFilter(\'unread\')">\u672a\u8bfb'+(totalUnread?' ('+totalUnread+')':'')+'</button><button class="pit-filter-btn'+(pitFilterMode==='read'?' pit-filter-active':'')+'" onclick="W.pitFilter(\'read\')">\u5df2\u8bfb'+(totalRead?' ('+totalRead+')':'')+'</button><button class="pit-filter-btn'+(pitFilterMode==='fav'?' pit-filter-active':'')+'" onclick="W.pitFilter(\'fav\')">\u2b50 \u6536\u85cf'+(totalFav?' ('+totalFav+')':'')+'</button></div>';
+  h+='<select class="pit-season-select" onchange="W.pitFilterSeason(this.value)"><option value="all">\u5168\u90e8\u5b63\u6570</option>';
+  seasonKeys.forEach(function(s){h+='<option value="'+s+'"'+(pitSeasonFilter===s?' selected':'')+'>'+'\u7b2c'+s+'\u5b63</option>'});
+  h+='</select>';
+  if(!filtered.length){h+='<div class="empty-msg"><div style="font-size:48px;margin-bottom:16px">'+(pitFilterMode==='read'?'\u2705':(pitFilterMode==='fav'?'\u2b50':'\u{1f389}'))+'</div><p>'+(pitFilterMode==='unread'?'\u6240\u6709\u5751\u70b9\u90fd\u5df2\u8bfb\uff01':pitFilterMode==='fav'?'\u8fd8\u6ca1\u6709\u6536\u85cf\u7684\u5751\u70b9':'\u8fd8\u6ca1\u6709\u5df2\u8bfb\u7684\u5751\u70b9')+'</p></div>'}
+  keys.forEach(function(k){
+    var items=groups[k];var icon=PIT_CAT_ICONS[k]||'\u{1f4cb}';var isOpen=pitExpanded[k]===true;
+    var allInCat=allGroups[k]||[];var readInCat=allInCat.filter(function(p){return progress.pitRead[p.id]}).length;
+    var readPct=allInCat.length?Math.round(readInCat/allInCat.length*100):0;
+    h+='<div class="pit-group"><button class="pit-group-header" onclick="W.pitToggleGroup(\''+k+'\')"><div class="pg-left"><span class="pg-icon">'+icon+'</span><span class="pg-name">'+esc(k)+'</span></div><div class="pg-right"><span class="pg-count">'+readInCat+'/'+allInCat.length+'</span><span class="pg-arrow">'+(isOpen?'\u25b2':'\u25bc')+'</span></div></button>';
+    if(isOpen){
+      h+='<div class="pg-progress"><div class="pg-progress-fill" style="width:'+readPct+'%"></div></div>';
+      var limit=Math.min(items.length,PIT_PAGE_SIZE+(pitShowAll[k]||0)*20);
+      h+='<div class="pit-items">';
+      for(var i=0;i<limit;i++){h+=renderPitCard(items[i])}
+      if(limit<items.length){h+='<button class="pit-more-btn" onclick="W.pitShowMore(\''+k+'\')">\u67e5\u770b\u66f4\u591a (\u8fd8\u6709 '+(items.length-limit)+' \u4e2a)</button>'}
+      h+='</div>';
+    }
+    h+='</div>';
+  });
+  h+='<div style="margin-top:20px;padding:16px;background:linear-gradient(135deg,var(--color-rose-bg),var(--bg-card));border:1px dashed var(--color-rose-light);border-radius:var(--radius);text-align:center">';
+  h+='<div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px">\u5f53\u524d\u4e3a\u8bd5\u8bfb\u7248</div>';
+  h+='<div style="font-size:13px;color:var(--text-secondary);line-height:1.7">\u5b8c\u6574\u7248\u8986\u76d6\u5168\u5e74\u6a21\u8003<br>\u6309\u51fa\u9898\u5957\u8def\u5206\u7c7b + \u9ad8\u9891\u5751\u70b9\u4e13\u9879\u6574\u7406<br>\u6301\u7eed\u66f4\u65b0\u4e2d</div>';
+  h+='<div style="font-size:12px;color:var(--text-tertiary);margin-top:8px">\u60f3\u8981\u5b8c\u6574\u7248\u53ef\u4ee5\u79c1\u4fe1\u9886\u53d6</div>';
+  h+='</div>';
+  h+='</div>';return h;
+}
+
 // ========== MAIN ==========
 function render(){
   var app=document.getElementById('app'),h='';
-  switch(page){case'home':h=renderHome();break;case'month':h=renderMonth();break;case'study':h=renderStudy();break;case'mindmap':h=renderMindmap();break;case'favorites':h=renderFavorites();break;case'learned':h=renderLearned();break;default:h=renderHome()}
+  switch(page){case'home':h=renderHome();break;case'month':h=renderMonth();break;case'study':h=renderStudy();break;case'mindmap':h=renderMindmap();break;case'favorites':h=renderFavorites();break;case'learned':h=renderLearned();break;case'pitfalls':h=renderPitfalls();break;default:h=renderHome()}
   app.innerHTML=h;
 }
 
@@ -562,7 +674,8 @@ window.W={
   hintBlank:function(bid){var m=allMonths.find(function(x){return x.id===params.monthId});var w=m&&m.weeks.find(function(x){return x.id===params.weekId});if(!w)return;var idx=params.start||0;var pt=w.points[idx];if(!pt)return;var bl=pt.blanks.find(function(b){return b.id===bid});if(bl&&bl.hint){alert('提示：'+bl.hint)}else{revealedBlanks[bid]=true;var sy=window.scrollY;render();window.scrollTo(0,sy)}},
   studyNav:function(dir){var m=allMonths.find(function(x){return x.id===params.monthId});var w=m&&m.weeks.find(function(x){return x.id===params.weekId});if(!w)return;var ni=(params.start||0)+dir;if(ni<0||ni>=w.points.length)return;params.start=ni;revealedBlanks={};render();window.scrollTo(0,0);var sc=document.querySelector('.study-card');if(sc)sc.scrollTop=0},
   toggleFold:function(prefix){var g=document.getElementById(prefix+'-grid'),b=document.getElementById(prefix+'-text'),a=document.getElementById(prefix+'-arrow');if(!g)return;var moreLabel=b&&b.getAttribute('data-more-label')?b.getAttribute('data-more-label'):'查看更多';if(g.style.display==='none'){g.style.display='grid';if(b)b.textContent='收起';if(a)a.textContent='▲'}else{g.style.display='none';if(b)b.textContent=moreLabel;if(a)a.textContent='▼'}},
-  reset:function(){if(confirm('确定要重置所有学习进度吗？')){progress={learned:{},favorites:[],mistakes:{},lastPosition:null};saveP(progress);render()}},
+  reset:function(){if(confirm('确定要重置所有学习进度吗？')){progress={learned:{},favorites:[],mistakes:{},lastPosition:null,pitRead:{},pitFav:{}};saveP(progress);render()}},
+  pitReset:function(){if(confirm('确定要清空所有坑点已读记录吗？')){progress.pitRead={};saveP(progress);pitExpanded={};pitCardExpanded={};pitShowAll={};render()}},
   toggleLearnedMonth:function(id){learnedExpanded[id]=learnedExpanded[id]===false?true:false;var sy=window.scrollY;render();window.scrollTo(0,sy)},
   mmToggleMonth:function(id){
     mmExpanded.months[id]=!mmExpanded.months[id];
@@ -585,6 +698,12 @@ window.W={
     if(body){body.style.display=mmExpanded.points[id]?'':'none'}
     if(icon){icon.textContent=mmExpanded.points[id]?'▾':'▸'}
   },
+  pitToggleGroup:function(k){pitExpanded[k]=!pitExpanded[k];if(!pitExpanded[k]){pitShowAll[k]=false;Object.keys(pitCardExpanded).forEach(function(id){var found=false;if(typeof pitfalls!=='undefined')pitfalls.forEach(function(p){if(p.id===id&&p.category===k)found=true});if(found)delete pitCardExpanded[id]})}var sy=window.scrollY;render();window.scrollTo(0,sy)},
+  pitToggleCard:function(id){var wasOpen=pitCardExpanded[id];pitCardExpanded={};if(!wasOpen){pitCardExpanded[id]=true;if(!progress.pitRead[id]){progress.pitRead[id]=true;saveP(progress)}}var el=document.querySelector('[onclick="W.pitToggleCard(\''+id+'\')"]');var rect=el?el.getBoundingClientRect():null;var sy=window.scrollY;render();if(rect&&!wasOpen){var el2=document.querySelector('[onclick="W.pitToggleCard(\''+id+'\')"]');if(el2){var r2=el2.getBoundingClientRect();window.scrollTo(0,sy+(r2.top-rect.top))}}else{window.scrollTo(0,sy)}},
+  pitFilter:function(mode){pitFilterMode=mode;pitCardExpanded={};pitShowAll={};render()},
+  pitToggleFav:function(id){if(!progress.pitFav)progress.pitFav={};if(progress.pitFav[id])delete progress.pitFav[id];else progress.pitFav[id]=true;saveP(progress);var btn=document.querySelector('[onclick="W.pitToggleFav(\''+id+'\')"]');if(btn){btn.textContent=progress.pitFav[id]?'\u2b50':'\u2606';btn.className='pit-fav-btn'+(progress.pitFav[id]?' pit-fav-active':'');var totalFav=0;pitfalls.forEach(function(p){if(progress.pitFav[p.id])totalFav++});var favBtn=document.querySelector('.pit-filter-btn[onclick="W.pitFilter(\'fav\')"]');if(favBtn)favBtn.textContent='\u2b50 \u6536\u85cf'+(totalFav?' ('+totalFav+')':'')}else{var sy=window.scrollY;render();window.scrollTo(0,sy)}},
+  pitFilterSeason:function(s){pitSeasonFilter=s;pitCardExpanded={};pitShowAll={};pitExpanded={};render()},
+  pitShowMore:function(k){pitShowAll[k]=(pitShowAll[k]||0)+1;var sy=window.scrollY;render();window.scrollTo(0,sy)},
   mmToggleAll:function(){var sorted=allMonths.slice().sort(function(a,b){return(b.year*100+b.month)-(a.year*100+a.month)});var singleMonth=params.monthId?sorted.find(function(m){return m.id===params.monthId}):null;var months=singleMonth?[singleMonth]:sorted;var allMonthIds=months.map(function(m){return m.id});var allWeekIds=months.reduce(function(a,m){return a.concat(m.weeks.map(function(w){return w.id}))},[]);var allPointIds=months.reduce(function(a,m){return a.concat(m.weeks.reduce(function(b,w){return b.concat(w.points.map(function(p){return p.id}))},[]))},[]);var allOpen=allMonthIds.every(function(id){return mmExpanded.months[id]})&&allWeekIds.every(function(id){return mmExpanded.weeks[id]})&&allPointIds.every(function(id){return mmExpanded.points[id]});if(allOpen){mmExpanded={months:{},weeks:{},points:{}}}else{months.forEach(function(m){mmExpanded.months[m.id]=true;m.weeks.forEach(function(w){mmExpanded.weeks[w.id]=true;w.points.forEach(function(p){mmExpanded.points[p.id]=true})})})}render()}
 };
 
