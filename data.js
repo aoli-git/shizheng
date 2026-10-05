@@ -14657,8 +14657,12 @@ var allMonths=[
                     highlight: true,
                     segments: [
                       {
-                        text: "我国成功在超过40万公里的地月距离上建立起双向",
+                        text: "我国成功在超过40万公里的地月距离上建立起",
                         highlight: false
+                      },
+                      {
+                        text: "双向",
+                        highlight: true
                       },
                       {
                         text: "激光链路",
